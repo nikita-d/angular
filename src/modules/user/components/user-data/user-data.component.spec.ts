@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserDataComponent } from './user-data.component';
+import { MatCardModule } from '@angular/material';
 
 describe('UserDataComponent', () => {
   let component: UserDataComponent;
@@ -8,6 +9,7 @@ describe('UserDataComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ MatCardModule ],
       declarations: [ UserDataComponent ]
     })
     .compileComponents();

@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '',
     resolve: {
-      users: UsersResolver,
+      // users: UsersResolver,
       paginationInfo: PaginationResolver
     },
     component: UsersListComponent

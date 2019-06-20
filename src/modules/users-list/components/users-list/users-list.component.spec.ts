@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsersListComponent } from './users-list.component';
+import {MatPaginatorModule, MatTableModule} from '@angular/material';
+import {RouterModule} from '@angular/router';
+import {ApiService, PaginationApiService} from '../../../core/services';
+import {HttpModule} from '@angular/http';
 
 describe('UsersListComponent', () => {
   let component: UsersListComponent;
@@ -8,7 +12,9 @@ describe('UsersListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersListComponent ]
+      imports: [ MatTableModule, MatPaginatorModule, RouterModule.forRoot([]), HttpModule ],
+      declarations: [ UsersListComponent ],
+      providers: [ ApiService, PaginationApiService ]
     })
     .compileComponents();
   }));

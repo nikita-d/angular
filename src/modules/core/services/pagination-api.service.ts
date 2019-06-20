@@ -15,7 +15,8 @@ export class PaginationApiService {
         total_pages: response.json().total_pages,
         per_page: response.json().per_page,
         total: response.json().total,
-        page: response.json().page
+        page: response.json().page,
+        data: response.json().data
       };
     }));
   }

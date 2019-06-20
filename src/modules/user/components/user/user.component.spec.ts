@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserComponent } from './user.component';
+import {UserDataComponent} from '../user-data/user-data.component';
+import {MatCardModule} from '@angular/material';
+import {ApiService, PaginationApiService} from '../../../core/services';
+import {HttpModule} from '@angular/http';
+import {RouterModule} from '@angular/router';
 
 describe('UserComponent', () => {
   let component: UserComponent;
@@ -8,7 +13,9 @@ describe('UserComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserComponent ]
+      imports: [MatCardModule, HttpModule, RouterModule.forRoot([])],
+      declarations: [ UserComponent, UserDataComponent ],
+      providers: [ ApiService, PaginationApiService]
     })
     .compileComponents();
   }));

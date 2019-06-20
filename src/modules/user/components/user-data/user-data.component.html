@@ -1,1 +1,9 @@
-<div>{{ user | json }}</div>
+<div class="mat-elevation-z8" *ngIf="isUserLoaded">
+  <mat-card class="card__user">
+    <mat-card-header>
+      <div mat-card-avatar class="card__user--avatar" [style.background-image]="'url(' + userData.avatar + ')'"></div>
+      <mat-card-title>{{userData.first_name}} {{userData.last_name}}</mat-card-title>
+      <mat-card-subtitle>{{userData.email}}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
